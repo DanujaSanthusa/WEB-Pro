@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1cd7c;
+    color: #222;
+    text-align: center;
+    padding: 30px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+} 
+
+/* Style the website link as a button. */
+.page-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2f53e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+/* Change the button color when the pointer is over it. */
+.page-button:hover,
+.page-button:focus-visible {
+    background-color: #1e40af;
+}
