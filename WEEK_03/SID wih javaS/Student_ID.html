@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Card</title>
+    <link rel="stylesheet" href="SID.css">
+    <script src="SID.js"></script>
+</head>
+<body>
+    <main class="id-card" aria-label="Student ID card">
+        <header class="card-header">
+            <p class="card-type">STUDENT ID CARD</p>
+            <h1>Anglia Ruskin University</h1>
+            <h2>CINEC Campus</h2>
+        </header>
+
+        <section class="card-body">
+            <div class="photo-frame">
+                <img src="SID Photo.png" alt="Student Photo" width="128" height="160">
+            </div>
+            <div class="student-details">
+                <p class="detail-label">Name</p>
+                <h3>Danuja Palihawadana</h3>
+                <dl>
+                    <dt>Student ID</dt>
+                    <dd class="student-number">M20071024002</dd>
+                    <dt>Course</dt>
+                    <dd>BSc Computer Science</dd>
+                </dl>
+            </div>
+        </section>
+
+        <footer class="card-footer">
+            <a href="https://www.linkedin.com/in/danuja-palihawadana-arachchi-001863245/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile <span aria-hidden="true">↗</span></a>
+            <br><br>
+        
+        <button onclick="changeName()">Change Campus</button>
+        <button onclick="changeBackground()">Change Background</button>
+        <button onclick="showMessage()">Show Message</button>
+        
+        </footer>
+    </main>
+</body>
+</html>

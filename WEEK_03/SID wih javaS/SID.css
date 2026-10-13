@@ -1,0 +1,199 @@
+/* Page layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eaf0f5;
+    color: #172b45;
+}
+
+/* Card and university heading */
+.id-card {
+    width: 100%;
+    max-width: 540px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d7e0e9;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(20, 43, 70, 0.14);
+}
+
+.card-header {
+    padding: 25px 30px 23px;
+    background: #142b46;
+    color: #ffffff;
+    border-bottom: 5px solid #39b7ad;
+}
+
+.card-type {
+    margin: 0 0 12px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    color: #a6e3dd;
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+h2 {
+    margin: 8px 0 0;
+    font-size: 15px;
+    font-weight: normal;
+    color: #d4dfeb;
+}
+
+/* Photograph and student information */
+.card-body {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.photo-frame {
+    flex-shrink: 0;
+    width: 132px;
+    height: 164px;
+    padding: 3px;
+    border: 1px solid #d7e0e9;
+    border-radius: 10px;
+    background: #edf2f6;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    color: #62748a;
+    font-size: 13px;
+}
+
+.student-details {
+    min-width: 0;
+}
+
+.detail-label,
+dt {
+    margin: 0 0 6px;
+    color: #62748a;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+dl {
+    margin: 0;
+}
+
+dd {
+    margin: 0 0 16px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+dd:last-child {
+    margin-bottom: 0;
+}
+
+.student-number {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Profile button */
+.card-footer {
+    padding: 16px 30px;
+    background: #f5f8fa;
+    border-top: 1px solid #e2e9ef;
+    text-align: right;
+}
+
+.card-footer a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #142b46;
+    border-radius: 7px;
+    background: #142b46;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.card-footer a:hover {
+    background: #157b74;
+    border-color: #157b74;
+}
+
+.card-footer a:focus-visible {
+    outline: 3px solid #39b7ad;
+    outline-offset: 3px;
+}
+
+.card-footer span {
+    margin-left: 10px;
+}
+
+/* Keep the card readable on smaller screens. */
+@media (max-width: 440px) {
+    .card-header {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        gap: 20px;
+    }
+
+    .card-footer {
+        padding: 16px 22px;
+        text-align: left;
+    }
+}
+
+/* Clean card output when printing. */
+@media print {
+    body {
+        min-height: auto;
+        padding: 0;
+        background: white;
+    }
+
+    .id-card {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .card-header,
+    .card-footer a {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
